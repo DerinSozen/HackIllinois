@@ -1,14 +1,17 @@
+<!need to change the addresses for our login page implementation to work>
+<!also the button needs to post to sql ahahaah>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB+Garamond" type="text/css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}" type="text/css">
-    <title>Kanban Board</title>
+    <title>Homework Tracker</title>
 </head>
 <body>
     <p>Logged in as {{user}} (<a href="{{ url_for('cal')}}">Log out</a>)</p>
-    <h1>Your Kanban Board</h1>
+    <h1>i tracka tha homework</h1>
     <div class="form">
         <form action="/add" method="post">
             <input type="text" name="task"required placeholder="Add a new task to do">
@@ -17,7 +20,7 @@
     </div>
     <div class="row">
         <div class="column">
-            <h2>Task to do</h2>
+            <h2>Monday</h2>
             <ul>
             {% for task in to_do %}
                 <li>{{ task.task }}</li>
@@ -29,7 +32,7 @@
             </ul>
         </div>
         <div class="column">
-           <h2>Task in progress</h2>
+           <h2>Tuesday</h2>
            <ul>
            {% for task in doing %}
                <li>{{ task.task }}</li>
@@ -41,7 +44,7 @@
             </ul>
         </div>
         <div class="column">
-        <h2>Task done</h2>
+        <h2>Wednesday</h2>
             <ul>
             {% for task in done %}
                <li>{{ task.task }}</li>
@@ -50,6 +53,54 @@
                     <button><a href="{{ url_for('change_status', id=task.id, status='doing') }}">Mark as doing</a></button>
                     <button><a href="{{ url_for('delete', id=task.id) }}">Delete task</a></button></li>
             {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Thursday</h2>
+            <ul>
+            {% for task in to_do %}
+                <li>{{ task.task }}</li>
+                <li>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='doing') }}">Mark as doing</a></button>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='done') }}">Mark as done</a></button>
+                    <button><a href="{{ url_for('delete', id=task.id) }}">Delete task</a></button></li>
+            {% endfor %}    
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Friday</h2>
+            <ul>
+            {% for task in to_do %}
+                <li>{{ task.task }}</li>
+                <li>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='doing') }}">Mark as doing</a></button>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='done') }}">Mark as done</a></button>
+                    <button><a href="{{ url_for('delete', id=task.id) }}">Delete task</a></button></li>
+            {% endfor %}    
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Saturday</h2>
+            <ul>
+            {% for task in to_do %}
+                <li>{{ task.task }}</li>
+                <li>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='doing') }}">Mark as doing</a></button>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='done') }}">Mark as done</a></button>
+                    <button><a href="{{ url_for('delete', id=task.id) }}">Delete task</a></button></li>
+            {% endfor %}    
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Sunday</h2>
+            <ul>
+            {% for task in to_do %}
+                <li>{{ task.task }}</li>
+                <li>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='doing') }}">Mark as doing</a></button>
+                    <button><a href="{{ url_for('change_status', id=task.id, status='done') }}">Mark as done</a></button>
+                    <button><a href="{{ url_for('delete', id=task.id) }}">Delete task</a></button></li>
+            {% endfor %}    
             </ul>
         </div>
     </div>
