@@ -13,8 +13,8 @@
   
   .column {
       float: left;
-      width: 30%;
-      padding: 10px;
+      width: 13%;
+      padding: 9px;
       background-color:#FFFFFF;
       height: 300px;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -34,7 +34,7 @@
   }
   
   li button {
-    font-family: "EB Garamond";
+    font-family: "Inconsolata";
     background: #81D5FE;
     width: 30.33%;
     color: #FFFFFF;
@@ -52,8 +52,20 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
   
+  .smallform {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto 50px;
+    padding: 0px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
   .form input {
-    font-family: "EB Garamond";
+    font-family: "Inconsolata";
     outline: 0;
     background: #f2f2f2;
     width: 100%;
@@ -64,7 +76,7 @@
     font-size: 14px;
   }
   .form button {
-    font-family: "EB Garamond";
+    font-family: "Inconsolata";
     text-transform: uppercase;
     outline: 0;
     background: #005BA1;
@@ -77,6 +89,7 @@
     transition: all 0.3 ease;
     cursor: pointer;
   }
+  
   .container {
     position: relative;
     z-index: 1;
@@ -86,7 +99,7 @@
   
   body {
     background: #81D5FE;
-    font-family: "EB Garamond";
+    font-family: "Inconsolata";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
   }
