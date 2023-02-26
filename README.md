@@ -1,8 +1,6 @@
 # HackIllinois Project
 
-Simple Homework tracker web app w/ Flask.
-
->*Credits:*
+Homework tracker web app w/ Flask, SQL, Bootstrap, HTML
 
 >**Derin Sozen** - Backend
 
